@@ -181,6 +181,7 @@ header{
 }
 .services_item{
   display: flex;
+  position: relative;
   flex-direction: column;
   text-align: center;
   width: 275px;
@@ -202,6 +203,9 @@ header{
   margin: 0 auto;
   width: 120px;
   height: 50px;
+  bottom: 40px;
+  position: absolute;
+  align-self: center;
   outline: none;
   background-color: transparent;
   border: 2px solid rgb(0, 0, 0);
