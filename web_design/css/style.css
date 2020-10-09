@@ -194,6 +194,7 @@ header{
 .about_items {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .about_item,
 .services_item {
