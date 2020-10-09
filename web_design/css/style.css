@@ -230,9 +230,9 @@ header{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: space-around;
   align-self: center;
   text-align: center;
-  justify-content: space-around;
 }
 .services_item{
   display: flex;
