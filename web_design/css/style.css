@@ -181,6 +181,7 @@ header{
 .team_title {
   font-size: 30px;
   font-weight: 700;
+  margin: 0 auto;
 }
 .about_text,
 .services_text,
@@ -207,11 +208,11 @@ header{
 }
 
 .services {
-  text-align: center;
   margin: 0 auto;
-  /*display: flex;
-  flex-direction: column;
-  align-items: center;*/
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .fulllscreen_container{
   margin-top: 100px;
@@ -219,12 +220,12 @@ header{
   background-color: rgb(202, 162, 247);
   margin-bottom: 100px;
   padding-bottom: 100px;
-  display: flex;
+  align-items: center;
+  text-align: center;
 }
 .services_items {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
   align-items: center;
   text-align: center;
 }
@@ -235,7 +236,7 @@ header{
   text-align: center;
   min-height: 500px;
   background-color: #fff;
-  margin: 0 15px 20px;
+  margin: 0 10px 20px ;
   box-sizing: border-box;
 }
 .services_item:hover{
