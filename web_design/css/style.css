@@ -21,11 +21,13 @@ body{
     max-width: 500px;
   }
 }
-@media (max-width: 1200px) {
+@media (min-width: 769px) {
   .about_text,
   .services_text,
-  .team_text {
-    max-width: 800px;
+  .team_text,
+  .blog_text,
+  .footer_text {
+    max-width: 650px;
   }
 }
 @media (max-width: 991px) {
@@ -206,7 +208,8 @@ header{
 .services_title,
 .latest_title,
 .team_title,
-.blog_title {
+.blog_title,
+.footer_title {
   font-size: 30px;
   font-weight: 700;
   margin: 0 auto;
@@ -214,7 +217,8 @@ header{
 .about_text,
 .services_text,
 .team_text,
-.blog_text {
+.blog_text,
+.footer_text {
   padding-top: 15px;
   font-size: 17px;
   margin: 0 auto;
@@ -418,6 +422,31 @@ header{
 .blog_item-text {
   margin-bottom: 40px;
 }
+
+#footer_fon {
+  background: url(../img/footer-fon.jpg) no-repeat center center/cover;
+  color: white;
+}
+footer {
+  max-width: 1200px;
+}
+.footer_icon-img {
+  width: 50px;
+  height: 50px;
+}
+#map {
+  background: url(../img/map.png) no-repeat center center/cover;
+  color: white;
+}
+#phone {
+  background: url(../img/phone.png) no-repeat center center/cover;
+  color: white;
+}
+#mail {
+  background: url(../img/mail.png) no-repeat center center/cover;
+  color: white;
+}
+
 
 /*jQuery slider*/
 

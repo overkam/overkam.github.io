@@ -65,4 +65,4 @@ $(document).ready(function(){
 })
 
 //console.log(document.querySelector('.jSlider').querySelector('.slick-prev.slick-arrow'))
-console.log(document.getElementsByTagName('button'))
+//console.log(document.getElementsByTagName('button'))
