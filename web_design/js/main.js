@@ -24,8 +24,7 @@ const btnPrev = document.querySelector('.btn_prev');
 const btnNext = document.querySelector('.btn_next');
 const itemsCount = items.length;
 const itemWidth = container.clientWidth / slidesToShow;
-const movePosition = slidesToScroll * itemWidth
-console.log(itemWidth)
+const movePosition = slidesToScroll * itemWidth;
 
 items.forEach((item) => {
   item.style.minWidth = `${itemWidth}px`
@@ -59,3 +58,11 @@ const checkBtns = () => {
 }
 
 checkBtns();
+
+// jQuery slider
+$(document).ready(function(){
+  $('.jSlider').slick();
+})
+
+//console.log(document.querySelector('.jSlider').querySelector('.slick-prev.slick-arrow'))
+console.log(document.getElementsByTagName('button'))

@@ -10,7 +10,17 @@ body{
     font-size: 60px;
   }
 }
-
+@media (min-width: 992px) { 
+  .blog_items {
+    max-width: 1125px;
+  }
+  .blog_item-img {
+    max-width: 500px;
+  }
+  .blog_item-seo {
+    max-width: 500px;
+  }
+}
 @media (max-width: 1200px) {
   .about_text,
   .services_text,
@@ -26,6 +36,15 @@ body{
   .services_items {
     max-width: 720px;
   }
+  .blog_items {
+    max-width: 750px;
+  }
+  .blog_item {
+    flex-direction: column;
+  }
+  #reverse {
+    flex-direction: column-reverse;
+  }
 }
 @media (max-width: 768px) {
   .about_text,
@@ -35,6 +54,9 @@ body{
   }
   .about_items {
     flex-direction: column;
+  }
+  .blog_items {
+    max-width: 510px;
   }
 }
 @media (max-width: 595px) {
@@ -183,14 +205,16 @@ header{
 .about_title,
 .services_title,
 .latest_title,
-.team_title {
+.team_title,
+.blog_title {
   font-size: 30px;
   font-weight: 700;
   margin: 0 auto;
 }
 .about_text,
 .services_text,
-.team_text {
+.team_text,
+.blog_text {
   padding-top: 15px;
   font-size: 17px;
   margin: 0 auto;
@@ -207,13 +231,15 @@ header{
   max-width: 300px;
 }
 .about_item-title,
-.services_item-title {
+.services_item-title,
+.blog_item-title {
   padding-top: 30px;
   padding-bottom: 25px;
   font-weight: 700;
 }
 
-.services {
+.services,
+.blog {
   margin: 0 auto;
   max-width: 960px;
   display: flex;
@@ -360,4 +386,99 @@ header{
 }
 .media:hover {
   color: black;
+}
+
+.blog {
+  max-width: 1100px;
+}
+.blog_items {
+  margin: 0 10px;
+}
+.blog_item {
+  display:flex;
+  text-align: left;
+  justify-content: space-between;
+}
+.blog_item-img img{
+  width: 100%;
+}
+.blog_item-title {
+  font-size: 27px;
+}
+.blog_item-date-dev {
+  display: flex;
+  font-weight: 500;
+}
+.blog_item-date {
+  margin-right: 20px;
+}
+.blog_item-img + .blog_item-seo {
+  margin: 20px;
+}
+.blog_item-text {
+  margin-bottom: 40px;
+}
+
+/*jQuery slider*/
+
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+  display: flex;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+.jSlider {
+  position: relative;
+}
+.jSlider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: -20px 0 0 0;
+}
+.jSlider .slick-arrow.slick-prev {
+  left: 0;
+  /*background: url(../img/prev.png) 0 0 / 100% no-repeat;
+  background-color: red;*/
+}
+.jSlider .slick-arrow.slick-next {
+  right: 0;
+  /*background: url(../img/next.png) 0 0 / 100% no-repeat;*/
 }
