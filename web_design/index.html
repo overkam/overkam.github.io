@@ -4,6 +4,7 @@
 <head>
   <meta charset='UTF-8'>
   <title>Web front</title>
+  <script src="https://use.fontawesome.com/7e2137d659.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;500;800&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='css/style.css'>
   <meta name="viewport" content="width=device-width">
@@ -72,6 +73,14 @@
       </div>
     </div>
     <div class="fulllscreen_container">
+      <div class="hystmodal" id="myModal">
+        <div class="hystmodal_window">
+          <div class="hystmodal_img"><i id="modal_img" class="fa"></i></div>
+          <button class="hystmodal_close"><i class="fa fa-times-circle"></i></button>
+          <div class="hystmodal_title">Research</div>
+          <div class="hystmodal_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi rem eum itaque exercitationem quidem modi iste fugiat dolor deleniti eveniet, temporibus nostrum, quasi in ratione! Sit cumque sunt ab distinctio. Pariatur illo incidunt officiis dignissimos, voluptatibus dicta voluptate unde sunt enim ab, ex exercitationem delectus doloremque, itaque nostrum accusantium blanditiis provident! Nostrum est eos cum quae quos at dolor omnis! Obcaecati sit optio sapiente odit pariatur quibusdam commodi aut quidem, doloribus cumque vitae, non ut, voluptate dolor porro consectetur. Ipsam earum aspernatur voluptates! Neque quos eos iste suscipit maxime perferendis.</div>
+        </div>
+      </div>
       <div class="services">
         <div class="services_title">Our Services</div>
         <div class="services_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non nobis neque incidunt
@@ -79,46 +88,52 @@
           deserunt laborum illum!</div>
         <div class="services_items">
           <div class="services_item">
+            <div class="services_item-img"><i class="fa fa-search"></i></div>
             <div class="services_item-title">Research</div>
             <div class="services_item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati
               molestiae ex dolores quo dolorem, quas nisi, cum, ipsa adipisci qui quisquam? Libero eum aut nostrum
               placeat suscipit debitis odio itaque?</div>
-            <button class="services_btn">Read More</button>
+            <button class="services_btn" id="research">Read More</button>
           </div>
           <div class="services_item">
+            <div class="services_item-img"><i class="fa fa-folder-open"></i></div>
             <div class="services_item-title">Portfolio</div>
             <div class="services_item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta tempore
               eveniet, fuga similique totam placeat delectus nemo maiores ut repudiandae odio deserunt optio nulla ipsum
               possimus veritatis tempora blanditiis nobis.</div>
-            <button class="services_btn">Read More</button>
+            <button class="services_btn" id="portfolio">Read More</button>
           </div>
           <div class="services_item">
+            <div class="services_item-img"><i class="fa fa-headphones"></i></div>
             <div class="services_item-title">Support</div>
             <div class="services_item-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis dicta
               dolorum eum cumque facilis fugiat repellendus? Fugiat odit iusto at consectetur, nisi distinctio odio
               quos. Culpa possimus ducimus voluptate iste.</div>
-            <button class="services_btn">Read More</button>
+            <button class="services_btn" id="support">Read More</button>
           </div>
           <div class="services_item">
+            <div class="services_item-img"><i class="fa fa-book"></i></div>
             <div class="services_item-title">Documentation</div>
             <div class="services_item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolorem
               tenetur modi animi! Aspernatur harum nesciunt expedita unde adipisci doloremque eaque, eius asperiores
               perferendis voluptates consequatur debitis eveniet numquam suscipit.</div>
-            <button class="services_btn">Read More</button>
+            <button class="services_btn" id="documentation">Read More</button>
           </div>
           <div class="services_item">
+            <div class="services_item-img"><i class="fa fa-lightbulb-o"></i></div>
             <div class="services_item-title">Development</div>
             <div class="services_item-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, iusto.
               Laborum eos quisquam eligendi, quam delectus unde omnis placeat ipsum magnam excepturi ipsam, nostrum
               alias quibusdam illum quos ullam accusamus?</div>
-            <button class="services_btn">Read More</button>
+            <button class="services_btn" id="development">Read More</button>
           </div>
           <div class="services_item">
+            <div class="services_item-img"><i class="fa fa-paint-brush"></i></div>
             <div class="services_item-title">Design</div>
             <div class="services_item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, corrupti?
               Veniam voluptates totam veritatis nisi labore necessitatibus! Nemo, ea, autem fugiat maxime explicabo
               dolor, at name cupiditate nam incidunt quidem.</div>
-            <button class="services_btn">Read More</button>
+            <button class="services_btn" id="design">Read More</button>
           </div>
         </div>
       </div>
@@ -241,29 +256,95 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     <div class="container">
+      <div class="team">
+        <div class="team_title">Our Team Memers</div>
+        <div class="team_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptates
+          cupiditate veniam odit eveniet illo quam optio? Sequi quaerat libero, vero veniam exercitationem rem ex? Omnis
+          tempore voluptatibus alias ipsa.</div>
+      </div>
       <div class="jSlider">
         <div class="jSlider_item">
-          <img src="img/memer.jpg" alt="">
+          <div class="jSlider_img">
+            <img src="img/memer.jpg" alt="">
+          </div>
+          <div class="jSlider_item-name">Ivan Ermakov</div>
+          <div class="jSlider_item-position">Megamind</div>
+          <div class="jSlider_item-media">
+            <button class="media"></button>
+            <button class="media"></button>
+            <button class="media"></button>
+            <button class="media"></button>
+          </div>
         </div>
         <div class="jSlider_item">
-          <img src="img/memer.jpg" alt="">
+          <div class="jSlider_img">
+            <img src="img/memer.jpg" alt="">
+          </div>
+          <div class="jSlider_item-name">Ivan Ermakov</div>
+          <div class="jSlider_item-position">Megamind</div>
+          <div class="jSlider_item-media">
+            <button class="media"></button>
+            <button class="media"></button>
+            <button class="media"></button>
+            <button class="media"></button>
+          </div>
         </div>
         <div class="jSlider_item">
-          <img src="img/memer.jpg" alt="">
+          <div class="jSlider_img">
+            <img src="img/memer.jpg" alt="">
+          </div>
+          <div class="jSlider_item-name">Ivan Ermakov</div>
+          <div class="jSlider_item-position">Megamind</div>
+          <div class="jSlider_item-media">
+            <button class="media"></button>
+            <button class="media"></button>
+            <button class="media"></button>
+            <button class="media"></button>
+          </div>
         </div>
         <div class="jSlider_item">
-          <img src="img/memer.jpg" alt="">
+          <div class="jSlider_img">
+            <img src="img/memer.jpg" alt="">
+          </div>
+          <div class="jSlider_item-name">Ivan Ermakov</div>
+          <div class="jSlider_item-position">Megamind</div>
+          <div class="jSlider_item-media">
+            <button class="media"></button>
+            <button class="media"></button>
+            <button class="media"></button>
+            <button class="media"></button>
+          </div>
         </div>
         <div class="jSlider_item">
-          <img src="img/memer.jpg" alt="">
+          <div class="jSlider_img">
+            <img src="img/memer.jpg" alt="">
+          </div>
+          <div class="jSlider_item-name">Ivan Ermakov</div>
+          <div class="jSlider_item-position">Megamind</div>
+          <div class="jSlider_item-media">
+            <button class="media"></button>
+            <button class="media"></button>
+            <button class="media"></button>
+            <button class="media"></button>
+          </div>
         </div>
         <div class="jSlider_item">
-          <img src="img/memer.jpg" alt="">
+          <div class="jSlider_img">
+            <img src="img/memer.jpg" alt="">
+          </div>
+          <div class="jSlider_item-name">Ivan Ermakov</div>
+          <div class="jSlider_item-position">Megamind</div>
+          <div class="jSlider_item-media">
+            <button class="media"></button>
+            <button class="media"></button>
+            <button class="media"></button>
+            <button class="media"></button>
+          </div>
         </div>
       </div>
-    </div>-->
+    </div>
     <div class="fulllscreen_container">
       <div class="blog">
         <div class="blog_title">Blog</div>

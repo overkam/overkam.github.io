@@ -13,7 +13,7 @@ function move(coords) {
     top: coords.top,
     behavior: "smooth"
   });
-}*/
+}
 let position = 0;
 const slidesToShow = 3;
 const slidesToScroll = 3;
@@ -58,11 +58,70 @@ const checkBtns = () => {
 }
 
 checkBtns();
+*/
+
+//modal window
+const servicingButtons = document.querySelectorAll('.services_btn');
+const servicingPage = document.querySelector('.hystmodal');
+const modalTitleElem = document.querySelector('.hystmodal_title');
+const modalImgElem = document.querySelector('#modal_img'); 
+
+const closeServicingPage = (e) => {
+  const target = e.target.classList
+  console.log(target);
+  if (target == 'hystmodal' || target == 'hystmodal_close'|| target == 'fa fa-times-circle') {
+    modalImgElem.classList.remove('fa-search', 'fa-folder-open',
+        'fa-headphones', 'fa-book', 'fa-lightbulb-o', 'fa-paint-brush');
+    servicingPage.style.visibility = 'hidden'
+  }
+
+}
+
+const showServicingPage = (e) => {
+  const name = e.target.id
+  switch (name) {
+    case 'research':
+      title = 'Research';
+      symbol = 'fa-search';
+      break
+    case 'portfolio':
+      title = 'Portfolio';
+      symbol = 'fa-folder-open';
+      break
+    case 'support':
+      title = 'Support';
+      symbol = 'fa-headphones';
+      break
+    case 'documentation':
+      title = 'Documentation';
+      symbol = 'fa-book';
+      break
+    case 'development':
+      title = 'Development';
+      symbol = 'fa-lightbulb-o';
+      break
+    case 'design':
+      title = 'Design';
+      symbol = 'fa-paint-brush';
+      break
+  }
+
+  modalImgElem.classList.add(symbol);
+  modalTitleElem.textContent = title;
+  servicingPage.style.visibility = 'visible';
+}
+
+servicingButtons.forEach(item => {
+  item.addEventListener('click', showServicingPage);
+});
+
+servicingPage.addEventListener('click', closeServicingPage);
 
 // jQuery slider
-$(document).ready(function(){
-  $('.jSlider').slick();
+$(document).ready(function () {
+  $('.jSlider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    dots: true,
+  });
 })
-
-//console.log(document.querySelector('.jSlider').querySelector('.slick-prev.slick-arrow'))
-//console.log(document.getElementsByTagName('button'))
