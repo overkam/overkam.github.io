@@ -61,61 +61,61 @@ checkBtns();
 */
 
 //modal window
-const servicingButtons = document.querySelectorAll('.services_btn');
-const servicingPage = document.querySelector('.hystmodal');
-const modalTitleElem = document.querySelector('.hystmodal_title');
-const modalImgElem = document.querySelector('#modal_img'); 
+const servicesButtons = document.querySelectorAll('.services_btn')
+const modalWindow = document.querySelector('.hystmodal')
+const modalTitle = document.querySelector('.hystmodal_title')
+const modalImage = document.querySelector('#modal_img')
+const modalClose = document.querySelector('.hystmodal_close')
 
-const closeServicingPage = (e) => {
-  const target = e.target.classList
-  console.log(target);
-  if (target == 'hystmodal' || target == 'hystmodal_close'|| target == 'fa fa-times-circle') {
-    modalImgElem.classList.remove('fa-search', 'fa-folder-open',
-        'fa-headphones', 'fa-book', 'fa-lightbulb-o', 'fa-paint-brush');
-    servicingPage.style.visibility = 'hidden'
-  }
-
-}
-
-const showServicingPage = (e) => {
+const openService = (e) => {
   const name = e.target.id
+  let title;
+  let symbol;
   switch (name) {
     case 'research':
-      title = 'Research';
-      symbol = 'fa-search';
-      break
+      title = 'Research'
+      symbol = 'fa-search'
+      break;
     case 'portfolio':
-      title = 'Portfolio';
-      symbol = 'fa-folder-open';
-      break
+      title = 'Portfolio'
+      symbol = 'fa-folder-open'
+      break;
     case 'support':
-      title = 'Support';
-      symbol = 'fa-headphones';
-      break
+      title = 'Support'
+      symbol = 'fa-headphones'
+      break;
     case 'documentation':
-      title = 'Documentation';
-      symbol = 'fa-book';
-      break
+      title = 'Documentation'
+      symbol = 'fa-book'
+      break;
     case 'development':
-      title = 'Development';
-      symbol = 'fa-lightbulb-o';
-      break
+      title = 'Development'
+      symbol = 'fa-lightbulb-o'
+      break;
     case 'design':
-      title = 'Design';
-      symbol = 'fa-paint-brush';
-      break
+      title = 'Design'
+      symbol = 'fa-paint-brush'
+      break;
   }
 
-  modalImgElem.classList.add(symbol);
-  modalTitleElem.textContent = title;
-  servicingPage.style.visibility = 'visible';
+  modalTitle.innerText = title
+  modalImage.classList.add(symbol)
+  modalWindow.style.visibility = 'visible';
 }
 
-servicingButtons.forEach(item => {
-  item.addEventListener('click', showServicingPage);
-});
+const closeService = (e) => {
+  const name = e.target.className
+  if (name == 'hystmodal' || name == 'hystmodal_close' || name == 'fa fa-times-circle') {
+    modalImage.classList.remove('fa-search', 'fa-folder-open', 'fa-headphones', 'fa-book', 'fa-lightbulb-o', 'fa-paint-brush')
+    modalWindow.style.visibility = 'hidden';
+  }
+}
 
-servicingPage.addEventListener('click', closeServicingPage);
+modalWindow.addEventListener('click', closeService)
+
+servicesButtons.forEach(e => {
+  e.addEventListener('click', openService)
+})
 
 // jQuery slider
 $(document).ready(function () {
@@ -123,5 +123,14 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 3,
     dots: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          
+        }
+      }
+    ]
   });
 })
+

@@ -261,61 +261,55 @@ header{
   display: flex;
 }
 .hystmodal {
-  display: flex;
-  visibility: hidden;
-  position: fixed;
   top: 0;
   left: 0;
+  position: fixed;
+  display: flex;  
   width: 100%;
   height: 100%;
-  background-color: #00000050;
-  text-align: center;
-  z-index: 130;
+  visibility: hidden;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 100;
+  justify-content: center;
 }
 .hystmodal_window {
-  position: relative;
-  margin: auto;
-  max-width: 600px;
-  width: 70vw;
-  min-height: 200px;
-  max-height: 80vh;
+  margin: 0 15px;
+  align-items:center;
+  align-self: center;
   background-color: #fff;
-  padding: 30px 30px 50px 30px;
-  overflow: auto;
+  position: relative;
+  max-width: 600px;
+  max-height: 80vh;
   border-radius: 5px;
+  overflow: auto;
 }
 .hystmodal_close {
   position: absolute;
-  display: flex;
-  right: 5px;
-  top: 5px;
+  right: 0;
+  top: 0;
   width: 50px;
   height: 50px;
-  font-size: 40px;
   border: none;
   background-color: #fff;
+  cursor: pointer;
+  font-size: 40px;
 }
-.hystmodal_close :focus {
+.hystmodal_close:focus {
   outline: none;
 }
-.hystmodal_close :hover{
-  color: #941f16;
-  cursor: pointer;
-}
-.hystmodal_close .fa {
-  display: block;
-  margin: auto;
+.hystmodal_close:hover {
+  color: rgb(243, 199, 77)
 }
 .hystmodal_img {
   font-size: 80px;
 }
 .hystmodal_title {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 35px;
 }
 .hystmodal_text {
-  font-size: 18px;
-
+  font-size: 20px;
+  padding: 10px
 }
 .services_items {
   display: flex;
@@ -444,17 +438,35 @@ header{
 }
 
 .media {
+  align-content: center;
+  font-size: 35px;
   width: 50px;
   height: 50px;
-  align-content: center;
-  background-image: url(../img/facebook.png);
-  background-size: contain;
-  background-repeat: no-repeat;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(209, 208, 208);
+  color:  rgb(75, 0, 160);
 }
-.media:hover {
-  color: black;
+#facebook:hover {
+  background-color: #3949ab;
+  transition: 0.2s;
+  color: white;
+}
+#twitter:hover {
+  background-color: #1c9deb;
+  transition: 0.2s;
+  color: white;
+}
+#vk:hover {
+  background-color: #015a92;
+  transition: 0.2s;
+  color: white;
+}
+#github:hover {
+  background-color: #000000ce;
+  transition: 0.2s;
+  color: white;
 }
 
 .blog {
@@ -516,7 +528,8 @@ footer {
 /*jQuery slider*/
 
 /* Слайдер */
-.slick-slider{}
+.slick-slider{
+}
 /* Слайдер запущен */
 .slick-slider.slick-initialized{}
 /* Слайдер с точками */
@@ -557,6 +570,7 @@ footer {
 
 .jSlider {
   position: relative;
+  padding: 0 40px;
 }
 .jSlider .slick-arrow {
   position: absolute;
@@ -566,9 +580,10 @@ footer {
   height: 40px;
   cursor: pointer;
   border: none;
+  filter: hue-rotate(160deg);
 }
-.jSlider .slick-arrow:active {
-  background-color: red;
+.jSlider .slick-arrow:focus {
+  outline: none;
 }
 .jSlider .slick-arrow.slick-prev {
   left: 0;
