@@ -125,9 +125,17 @@ $(document).ready(function () {
     dots: true,
     responsive: [
       {
-        breakpoint: 991,
+        breakpoint: 785,
         settings: {
-          
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       }
     ]
