@@ -1,72 +1,10 @@
-/*let buttonsId = ['about_btn', 'about_btn-arrow']
-
-buttonsId.forEach((btnId) => {
-  let button = document.getElementById(btnId)
-  console.log(button)
-  let buttonCoords = button.getBoundingClientRect();
-  console.log(buttonCoords)
-  button.addEventListener('click', move(buttonCoords))
-})
-
-function move(coords) {
-  window.scrollTo({
-    top: coords.top,
-    behavior: "smooth"
-  });
-}
-let position = 0;
-const slidesToShow = 3;
-const slidesToScroll = 3;
-const container = document.querySelector('.slider_container');
-const track = document.querySelector('.slider_track');
-const items = document.querySelectorAll('.team_item');
-const btnPrev = document.querySelector('.btn_prev');
-const btnNext = document.querySelector('.btn_next');
-const itemsCount = items.length;
-const itemWidth = container.clientWidth / slidesToShow;
-const movePosition = slidesToScroll * itemWidth;
-
-items.forEach((item) => {
-  item.style.minWidth = `${itemWidth}px`
-})
-
-btnNext.addEventListener('click', () => {
-  const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
-
-  position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-  
-  setPosition();
-  checkBtns();
-})
-
-btnPrev.addEventListener('click', () => {
-  const itemsLeft = Math.abs(position) / itemWidth;
-
-  position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-  
-  setPosition();
-  checkBtns();
-})
-
-const setPosition = () => {
-  track.style.transform = `translateX(${position}px)`
-}
-
-const checkBtns = () => {
-  btnPrev.disabled = position === 0;
-  btnNext.disabled = position <= -(itemsCount - slidesToShow) * itemWidth;
-}
-
-checkBtns();
-*/
-
-//modal window
 const servicesButtons = document.querySelectorAll('.services_btn')
 const modalWindow = document.querySelector('.hystmodal')
 const modalTitle = document.querySelector('.hystmodal_title')
 const modalImage = document.querySelector('#modal_img')
 const modalClose = document.querySelector('.hystmodal_close')
 
+//modal window
 const openService = (e) => {
   const name = e.target.id
   let title;
@@ -116,6 +54,51 @@ modalWindow.addEventListener('click', closeService)
 servicesButtons.forEach(e => {
   e.addEventListener('click', openService)
 })
+
+//filter works
+const imagesWrapper = document.querySelector('.latest_images')
+const allImages = document.querySelectorAll('.latest_img')
+const webImages = document.querySelectorAll('[data-web]')
+const uiImages = document.querySelectorAll('[data-ui]')
+const mockImages = document.querySelectorAll('[data-mock]')
+
+
+filterWorks = (e) => {
+  document.querySelectorAll('.latest_img').forEach((item) => imagesWrapper.removeChild(item))
+  const work = e.id
+  switch (work) {
+    case 'latest_btn-web':
+      webImages.forEach((el) => imagesWrapper.appendChild(el))
+      break
+    case 'latest_btn-ui':
+      uiImages.forEach((el) => imagesWrapper.appendChild(el))
+      break
+    case 'latest_btn-mockups':
+      mockImages.forEach((el) => imagesWrapper.appendChild(el))
+      break
+    case 'latest_btn-all':
+      allImages.forEach((el) => imagesWrapper.appendChild(el))
+      break
+  }
+}
+
+const latestButtons = document.querySelectorAll('.latest_btn')
+let hoverButton = document.querySelector('.latest_btn:hover')
+const allButton = document.querySelector('#latest_btn-all')
+if (!hoverButton) {
+  allButton.classList.add('latest_btn-hover');
+  hoverButton = allButton;
+  filterWorks(hoverButton)
+}
+latestButtons.forEach(e => e.addEventListener('click', () => {
+  if (e != hoverButton) {
+    e.classList.add('latest_btn-hover')
+    hoverButton.classList.remove('latest_btn-hover')
+    hoverButton = e;
+  }
+  filterWorks(e)
+}))
+
 
 // jQuery slider
 $(document).ready(function () {
