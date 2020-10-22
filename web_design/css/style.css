@@ -21,7 +21,7 @@ body{
     max-width: 500px;
   }
   .jSlider_img img {
-    max-width: 240px;
+    max-width: 300px;
   }
   .jSlider_item-media {
     display: block;
@@ -584,14 +584,22 @@ footer {
 /* Активная точка */
 .slick-dots li.slick-active{}
 /* Элемент точки */
-.slick-dots li button{}
+.slick-dots li button{
+  cursor: pointer;
+}
+.slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots {
+  padding: 0;
+}
 
 .jSlider {
   position: relative;
   padding: 0 40px;
+  margin: 0 20px;
 }
 .jSlider .slick-arrow {
-  margin: 0 20px;
   position: absolute;
   font-size: 0;
   width: 40px;
