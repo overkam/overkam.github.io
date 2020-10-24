@@ -9,6 +9,18 @@ body{
   .header_title {
     font-size: 60px;
   }
+  .latest_img {
+  background-size: 350px;
+  width: 350px;
+  height: 350px;
+  }
+  #image_01_hover03 {
+  width:350px;
+  height:350px;
+  }
+  .latest_img:hover {
+    background-size:530px;
+  }
 }
 @media (min-width: 992px) { 
   .blog_items {
@@ -37,6 +49,20 @@ body{
   .blog_text,
   .footer_text {
     max-width: 650px;
+  }
+}
+@media (max-width: 571px) {
+  .latest_img {
+  background-size: 250px;
+  width: 250px;
+  height: 250px;
+  }
+  #image_01_hover03 {
+    width:250px;
+    height:250px;
+  } 
+  .latest_img:hover {
+    background-size:330px;
   }
 }
 @media (max-width: 991px) {
@@ -430,14 +456,103 @@ header{
 }
 .latest_img {
   margin: 10px;
-  max-width: 350px;
   cursor: pointer;
   box-sizing: border-box;
   object-fit: cover;
+  text-align: center;
+  transition: all 0.4s;
+  position: relative;
 }
 .latest_img img {
   width: 100%;
 }
+#image_01 {
+  background-image: url(../img/web\ design.jpg);
+}
+#image_02 {
+  background-image: url(../img/web\ design2.jpg);
+}
+#image_03 {
+  background-image: url(../img/web\ design3.jpg);
+}
+#image_04 {
+  background-image: url(../img/web\ design4.jpg);
+}
+#image_05 {
+  background-image: url(../img/web\ design5.jpg);
+}
+#image_06 {
+  background-image: url(../img/web\ design6.jpg);
+}
+.latest_img:hover {
+  opacity:1.0;
+}
+.latest_img:hover #image_01_hover03 {
+  opacity: 0.2;
+}
+.latest_img:hover #image_01_hover {
+  opacity: 1.0;
+  top:120px;
+  left:-40px;
+}
+.latest_img:hover #image_01_hover02 {
+  top:66px;
+  left:40px;
+  opacity: 1.0;
+  align-items: center;
+}
+p1 {
+  position: relative;
+  left:5px;
+}
+#image_01_hover{
+  width:77px;
+  height: 50px;
+  background-color:transparent;
+  border-left:2px solid #fff;
+  border-top:2px solid #fff;
+  border-bottom:2px solid #fff;
+  border-right:0px solid #fff;
+  position: relative;
+  top:120px;
+  left:-170px;
+  margin:auto;
+  opacity: 0.0;
+  transition: all 0.4s;
+  color:#fff;
+  text-align:center;
+}
+#image_01_hover p1 {
+  font-size:34px;
+}
+#image_01_hover02{
+  width:110px;
+  height: 50px;
+  background-color:transparent;
+  border-left:0px solid #fff;
+  border-top:2px solid #fff;
+  border-bottom:2px solid #fff;
+  border-right:2px solid #fff;
+  position: relative;
+  top:66px;
+  left:160px;
+  margin:auto;
+  opacity: 0.0;
+  transition: all 0.4s;
+  color:#fff;
+  font-size:35px;
+  text-align:center;
+}
+#image_01_hover03 {
+  background-color:#fff;
+  margin:auto;
+  text-align:center;
+  transition: all 0.4s;
+  position: relative;
+  top:-108px;
+  opacity: 0.0;
+}
+
 
 .jSlider_item {
   align-items: center;
