@@ -3,6 +3,7 @@ const modalWindow = document.querySelector('.hystmodal')
 const modalTitle = document.querySelector('.hystmodal_title')
 const modalImage = document.querySelector('#modal_img')
 const modalClose = document.querySelector('.hystmodal_close')
+const body = document.querySelector('body');
 
 //modal window
 const openService = (e) => {
@@ -39,6 +40,7 @@ const openService = (e) => {
   modalTitle.innerText = title
   modalImage.classList.add(symbol)
   modalWindow.style.visibility = 'visible';
+  body.style.overflow = 'hidden';
 }
 
 const closeService = (e) => {
@@ -46,6 +48,7 @@ const closeService = (e) => {
   if (name == 'hystmodal' || name == 'hystmodal_close' || name == 'fa fa-times-circle') {
     modalImage.classList.remove('fa-search', 'fa-folder-open', 'fa-headphones', 'fa-book', 'fa-lightbulb-o', 'fa-paint-brush')
     modalWindow.style.visibility = 'hidden';
+    body.style.overflow = 'auto';
   }
 }
 
