@@ -19,6 +19,7 @@ body{
   height:350px;
   }
   .latest_img:hover {
+    background-position: center;
     background-size:530px;
   }
 }
@@ -63,6 +64,7 @@ body{
   } 
   .latest_img:hover {
     background-size:330px;
+    background-position: center;
   }
 }
 @media (max-width: 991px) {
