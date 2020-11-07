@@ -51,6 +51,9 @@ body{
   .footer_text {
     max-width: 650px;
   }
+  .submit {
+    margin: 15px 110px;
+  }
 }
 @media (max-width: 571px) {
   .latest_img {
@@ -102,6 +105,16 @@ body{
   }
   .blog_items {
     max-width: 510px;
+  }
+  .footer_icons {
+    flex-flow: column;
+    align-items: center;
+  }
+  .footer_wrapper {
+    flex-direction: column;
+  }
+  .submit {
+    margin: 15px 50px;
   }
 }
 @media (max-width: 595px) {
@@ -296,10 +309,8 @@ header{
   flex-direction: column;
 }
 .fulllscreen_container{
-  margin-top: 100px;
   padding-top: 100px;
   background-color: rgb(202, 162, 247);
-  margin-bottom: 100px;
   padding-bottom: 100px;
   justify-content: center;
   text-align: center;
@@ -540,7 +551,7 @@ p1 {
   border-right:2px solid #fff;
   position: relative;
   top:66px;
-  left:91px;
+  left:80px;
   margin:auto;
   opacity: 0.0;
   transition: all 0.4s;
@@ -653,25 +664,92 @@ p1 {
   color: white;
 }
 footer {
-  max-width: 1200px;
+  margin: 0 20px;
+  max-width: 1100px;
+  width: 100%;
+}
+.footer_icons {
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.footer_icon {
+  width: 170px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  color: rgb(206, 202, 202)
 }
 .footer_icon-img {
-  width: 50px;
-  height: 50px;
-}
-#map {
-  background: url(../img/map.png) no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
+  font-size: 42px;
+  margin: 0 auto 15px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0, 0, 150, 0.788);
+  border-radius: 100%;
 }
-#phone {
-  background: url(../img/phone.png) no-repeat center center/cover;
-  color: white;
+.footer_icon_text {
+  font-size: 23px;
+  font-weight: 500;
 }
-#mail {
-  background: url(../img/mail.png) no-repeat center center/cover;
-  color: white;
+.footer_form {
+  padding: 70px 100px 0 100px;
+}
+.footer_wrapper {
+  display: flex;
+  width: 100%;
+}
+.footer_form-input{
+  font-weight: 500;
+  font-size: 20px;
+  margin: 10px 10px;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+}
+.footer_form-input:focus,
+textarea:focus,
+.submit:focus {
+  outline: none;
+}
+textarea {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 10px 10px;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-family: Arial;
+}
+.submit {
+  font-size: 20px;
+  font-weight: 500;
+  float: right;
+  padding: 20px 60px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
+.endline {
+  font-size: 25px;
+  margin: 15px 0;
+  font-weight: 800;
+  background-color: #fff;
+  text-align: center;
+}
 
 /*jQuery slider*/
 
