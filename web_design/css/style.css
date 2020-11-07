@@ -54,6 +54,13 @@ body{
   .submit {
     margin: 15px 110px;
   }
+  .footer_form {
+    padding: 70px 100px 0 100px;
+  }
+  .footer_form-input,
+  textarea {
+    width: 100%;
+  }
 }
 @media (max-width: 571px) {
   .latest_img {
@@ -113,8 +120,11 @@ body{
   .footer_wrapper {
     flex-direction: column;
   }
+  .footer_form {
+    padding: 70px 10px 0;
+  }
   .submit {
-    margin: 15px 50px;
+    margin: 15px 20px;
   }
 }
 @media (max-width: 595px) {
@@ -607,6 +617,9 @@ p1 {
   background-color: rgb(209, 208, 208);
   color:  rgb(75, 0, 160);
 }
+.media:hover {
+  outline: none;
+}
 #facebook:hover {
   background-color: #3949ab;
   transition: 0.2s;
@@ -666,6 +679,7 @@ p1 {
 footer {
   margin: 0 20px;
   max-width: 1100px;
+  min-width: 300px;
   width: 100%;
 }
 .footer_icons {
@@ -701,11 +715,9 @@ footer a:hover {
   font-size: 23px;
   font-weight: 500;
 }
-.footer_form {
-  padding: 70px 100px 0 100px;
-}
 .footer_wrapper {
   display: flex;
+  min-width: 300px;
   width: 100%;
 }
 .footer_form-input{
@@ -713,7 +725,6 @@ footer a:hover {
   font-size: 20px;
   margin: 10px 10px;
   padding: 20px;
-  width: 100%;
   border: none;
   border-radius: 10px;
 }
@@ -727,7 +738,6 @@ textarea {
   font-size: 20px;
   margin: 10px 10px;
   padding: 20px;
-  width: 100%;
   border: none;
   border-radius: 10px;
   font-family: Arial;
