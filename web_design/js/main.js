@@ -157,13 +157,13 @@ function move(element) {
       document.querySelector('#blog_section').scrollIntoView({ behavior: 'smooth' })
       break;
     case 'contact_btn':
-      document.querySelector('#contact_section').scrollIntoView({ behavior: 'smooth' })
+      document.querySelector('#footer_fon').scrollIntoView({ behavior: 'smooth' })
       break;
     case 'header-services_btn':
       document.querySelector('#services_section').scrollIntoView({ behavior: 'smooth' })
       break;
     case 'header-contact_btn':
-      document.querySelector('#contact_section').scrollIntoView({ behavior: 'smooth' })
+      document.querySelector('#footer_fon').scrollIntoView({ behavior: 'smooth' })
       break;
     case 'header-about_btn':
       document.querySelector('#about_section').scrollIntoView({ behavior: 'smooth' })

@@ -128,6 +128,9 @@ body{
   }
 }
 @media (max-width: 595px) {
+  .nav_logo {
+    padding-left: 0px !important;
+  }
   .nav_inner-buttons {
     flex-direction: column;
   }
