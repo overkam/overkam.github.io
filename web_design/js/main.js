@@ -128,3 +128,45 @@ $(document).ready(function () {
   });
 })
 
+// windowscroll
+let buttonsId = ['about_btn', 'services_btn', 'portfolio_btn', 'blog_btn', 'contact_btn', 'header-services_btn', 'header-contact_btn', 'header-about_btn']
+let moveButtons = []
+buttonsId.forEach((btnId) => {
+  let button = document.getElementById(btnId)
+  moveButtons.push(button)
+})
+moveButtons.forEach(e => {
+  e.addEventListener('click', () => {
+    move(e);
+  })
+})
+
+function move(element) {
+  let name = element.id
+  switch (name) {
+    case 'about_btn':
+      document.querySelector('#about_section').scrollIntoView({block: 'start', behavior: 'smooth' })
+      break;
+    case 'services_btn':
+      document.querySelector('#services_section').scrollIntoView({ behavior: 'smooth' })
+      break;
+    case 'portfolio_btn':
+      document.querySelector('#portfolio_section').scrollIntoView({ behavior: 'smooth' })
+      break;
+    case 'blog_btn':
+      document.querySelector('#blog_section').scrollIntoView({ behavior: 'smooth' })
+      break;
+    case 'contact_btn':
+      document.querySelector('#contact_section').scrollIntoView({ behavior: 'smooth' })
+      break;
+    case 'header-services_btn':
+      document.querySelector('#services_section').scrollIntoView({ behavior: 'smooth' })
+      break;
+    case 'header-contact_btn':
+      document.querySelector('#contact_section').scrollIntoView({ behavior: 'smooth' })
+      break;
+    case 'header-about_btn':
+      document.querySelector('#about_section').scrollIntoView({ behavior: 'smooth' })
+      break;
+  }
+}
